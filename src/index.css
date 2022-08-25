@@ -25,5 +25,28 @@
 .notes-list{
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+.note.new{
+    background-color:hotpink ; 
+}
+
+textarea{
+    resize: none;
+    border: none;
+    background-color: hotpink;
+}
+
+.save{
+    border:none;
+    border-radius: 15px;
+    background-color: lightgray;
+    padding: 5px 10px 5px 10px
+}
+
+.save:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
