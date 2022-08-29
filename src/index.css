@@ -38,11 +38,15 @@ textarea{
     background-color: hotpink;
 }
 
+textarea:focus{
+    outline: none
+}
+
 .save{
     border:none;
     border-radius: 15px;
     background-color: lightgray;
-    padding: 5px 10px 5px 10px
+    padding: 5px 10px 
 }
 
 .save:hover{
