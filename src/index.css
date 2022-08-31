@@ -30,17 +30,21 @@
 }
 
 .note.new{
-    background-color:hotpink ; 
+    background-color: lightcoral;
 }
 
 textarea{
     resize: none;
     border: none;
-    background-color: hotpink;
+    background-color: lightcoral;
 }
 
 textarea:focus{
     outline: none
+}
+
+textarea::placeholder{
+    color: antiquewhite;
 }
 
 .save{
@@ -57,4 +61,23 @@ textarea:focus{
 
 .delete-icon{
     cursor: pointer;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 230, 230);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 1.5em;
+
+}
+
+.search input{
+    border: none;
+    background-color: rgb(233, 230, 230);
+}
+
+.search input:focus{
+    outline: none;
 }
