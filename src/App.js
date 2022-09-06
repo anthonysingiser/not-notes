@@ -1,55 +1,23 @@
 import NotesList from './components/Noteslist'
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {nanoid} from 'nanoid';
 import Search from './components/Search'
 import Header from './components/Header';
-
+//use API for state
+//make a back-end for the object
+//function that presents a random note, "Better Things" to do than [blank]
 function App() {
+
   const [notes, setNotes] = useState([
     {
       id: nanoid(),
-      text: 'text of the first note',
-      date: '08/23/2022',
+      text: 'Notes App...',
+      date: new Date().toLocaleDateString()
     },
-    {
-      id: nanoid(),
-      text: 'text of the second note',
-      date: '08/23/2022',
-    },
-    {
-      id: nanoid(),
-      text: 'text of the third note',
-      date: '08/23/2022',
-    },
-    {
-      id: nanoid(),
-      text: 'text of the fourth note',
-      date: '08/23/2022',
-    },
-    {
-      id: nanoid(),
-      text: 'text of the fifth note',
-      date: '08/23/2022',
-    },
-]);
+  ])
 
-  const [searchText, setSearchText] = useState('')
-  
+  const [searchText, setSearchText] = useState('')  
   const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    const savedNotes = localStorage.getItem('react-notes-app-data')
-    if(savedNotes) {
-      setNotes(JSON.parse(savedNotes))
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(
-      'react-notes-app-data', 
-      JSON.stringify(notes)
-    )
-  }, [notes]);
 
   const addNote = (text) => {
     const date = new Date()
